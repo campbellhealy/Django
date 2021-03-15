@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Add a Team</h2>
+</br>
+<form method="post" id="teamForm" data-leagues-url="{% url 'ajax_load_leagues' %}" novalidate>
+  {% csrf_token %}
+  <table>
+    {{ form.as_table }}
+  </table>
+  <button class="btn btn-info mb-1" type="submit">Submit</button>
+  <a class="btn btn-outline-danger mb-1" href="{% url 'team_changelist' %}">Cancel</a>
+</form>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+  $("#id_country").change(function () {
+    var url = $("#teamForm").attr("data-leagues-url");
+    var countryId = $(this).val();
+
+    $.ajax({
+      url: url,
+      data: {
+        'country': countryId
+      },
+      success: function (data) {
+        $("#id_league").html(data);
+      }
+    });
+
+  });
+</script>
+
+{% endblock %}

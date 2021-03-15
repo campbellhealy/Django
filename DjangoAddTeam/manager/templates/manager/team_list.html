@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}The App{% endblock %}
+
+{% block content %}
+<h2>&nbsp;The Manager</h2>
+
+<p>
+  <a class="btn btn-outline-info mb-1" href="{% url 'team_add' %}">+ Team</a>
+</p>
+
+<table border="1">
+  <thead>
+    <tr text-align: center>
+      <th>&nbsp;Team&nbsp;</th>
+      <th>&nbsp;Established&nbsp;</th>
+      <th>&nbsp;Country&nbsp;</th>
+      <th>&nbsp;League&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for team in teams %}
+    <tr>
+      <td><a href="{% url 'team_change' team.pk %}">{{ team.name }}</a></td>
+      <td>{{ team.birthdate }}</td>
+      <td>{{ team.country.name }}</td>
+      <td>{{ team.league.name }}</td>
+    </tr>
+    {% empty %}
+    <tr>
+      <td colspan="4">&nbsp;No team in the database.&nbsp;<a class="btn btn-danger mb-1" href="{% url 'team_add' %}">Add
+          the first team</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}

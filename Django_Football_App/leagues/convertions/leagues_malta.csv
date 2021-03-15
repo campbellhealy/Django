@@ -1,0 +1,6 @@
+country_id,country_name,league_id,league_name,league_season,league_logo,country_logo
+90,Malta,321,Division 1,2020/2021,https://apiv2.apifootball.com/badges/logo_leagues/321_division-1.png,https://apiv2.apifootball.com/badges/logo_country/90_malta.png
+90,Malta,322,FA Trophy,2019/2020,https://apiv2.apifootball.com/badges/logo_leagues/322_fa-trophy.png,https://apiv2.apifootball.com/badges/logo_country/90_malta.png
+90,Malta,320,Premier League,2020/2021,https://apiv2.apifootball.com/badges/logo_leagues/320_premier-league.png,https://apiv2.apifootball.com/badges/logo_country/90_malta.png
+90,Malta,324,Summer Cup,2018,https://apiv2.apifootball.com/badges/logo_leagues/324_summer-cup.png,https://apiv2.apifootball.com/badges/logo_country/90_malta.png
+90,Malta,323,Super Cup,2019,https://apiv2.apifootball.com/badges/logo_leagues/323_super-cup.png,https://apiv2.apifootball.com/badges/logo_country/90_malta.png

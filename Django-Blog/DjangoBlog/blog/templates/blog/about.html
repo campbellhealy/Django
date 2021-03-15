@@ -1,0 +1,8 @@
+{% extends 'blog/base.html' %}
+{% block image %}
+<a class="navbar-brand mr-4" href="{% url 'blog_home' %}">VC Healy</a>
+{% endblock image %}
+{% block content %}
+<h1>About Me!</h1>
+{% lorem 3 p random %}
+{% endblock content %}
